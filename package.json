@@ -1,0 +1,19 @@
+{
+  "name": "javascript",
+  "version": "1.0.0",
+  "description": "Javascript examples",
+  "main": "",
+  "directories": {},
+  "scripts": {
+    "unit": "jest --config jest.config.js --coverage",
+    "test": "npm run unit",
+    "lint": "eslint --ext .js src"
+  },
+  "devDependencies": {
+    "@jest/globals": "^26.6.2",
+    "expect": "^26.6.2",
+    "@types/jest": "^26.0.16",
+    "jest": "^26.6.3"
+  },
+  "author": "Avinash Ko"
+}
