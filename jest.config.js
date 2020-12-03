@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = () => ({
   verbose: true,
   rootDir: '.',
   testMatch: [
@@ -7,4 +7,4 @@ module.exports = {
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
   ],
-};
+});
