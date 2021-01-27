@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="302af277-5efa-48da-b9bf-517bebdf411d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/algorithms/add-numbers/add-two-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/add-numbers/add-two-numbers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/two-sum/two-sum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/algorithms/two-sum/two-sum.spec.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +113,7 @@
       <workItem from="1606957786012" duration="1005000" />
       <workItem from="1606959109831" duration="1521000" />
       <workItem from="1611632545095" duration="2314000" />
-      <workItem from="1611684840251" duration="13902000" />
+      <workItem from="1611684840251" duration="16613000" />
     </task>
     <servers />
   </component>
@@ -203,10 +205,10 @@
       <screen x="1296" y="767" width="1920" height="1080" />
     </state>
     <state x="2042" y="1224" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1296.2281/1296.767.1920.1080@1296.767.1920.1080" timestamp="1611708801454" />
-    <state x="1958" y="1046" width="596" height="522" key="find.popup" timestamp="1611705972970">
+    <state x="1958" y="1046" width="596" height="522" key="find.popup" timestamp="1611716580113">
       <screen x="1296" y="767" width="1920" height="1080" />
     </state>
-    <state x="1958" y="1046" width="596" height="522" key="find.popup/0.23.1296.2281/1296.767.1920.1080@1296.767.1920.1080" timestamp="1611705972970" />
+    <state x="1958" y="1046" width="596" height="522" key="find.popup/0.23.1296.2281/1296.767.1920.1080@1296.767.1920.1080" timestamp="1611716580113" />
     <state x="1921" y="1008" width="670" height="676" key="search.everywhere.popup" timestamp="1611705976757">
       <screen x="1296" y="767" width="1920" height="1080" />
     </state>
