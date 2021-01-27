@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="302af277-5efa-48da-b9bf-517bebdf411d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/algorithms/util/is-undefined.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/algorithms/util/is-undefined.spec.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/algorithms/add-numbers/add-two-numbers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/add-numbers/add-two-numbers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/algorithms/add-numbers/add-two-numbers.spec.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/algorithms/add-numbers/add-two-numbers.spec.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +111,7 @@
       <workItem from="1606957786012" duration="1005000" />
       <workItem from="1606959109831" duration="1521000" />
       <workItem from="1611632545095" duration="2314000" />
-      <workItem from="1611684840251" duration="13625000" />
+      <workItem from="1611684840251" duration="13902000" />
     </task>
     <servers />
   </component>

@@ -54,7 +54,6 @@ const addTwoNumbersByConversion = (firstList, secondList) => {
   return convertArrayToList(sumArray); // ?
 };
 
-// eslint-disable-next-line no-unused-vars
 const addTwoNumbers = (firstList, secondList) => {
   if (isUndefined(firstList) || isUndefined(secondList)) return undefined;
   let resultListHead;
