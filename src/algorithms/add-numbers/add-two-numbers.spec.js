@@ -66,16 +66,97 @@ describe('add two numbers file checks', () => {
       });
     });
   });
-  describe('add two numbers checks', () => {
+  describe('add two numbers by conversion checks', () => {
     it('should handle invalid inputs', () => {
-      expect(addTwoNumbers.addTwoNumbers(undefined, addTwoNumbers.convertArrayToList([1, 3])))
+      expect(addTwoNumbers.addTwoNumbersByConversion(
+        undefined, addTwoNumbers.convertArrayToList([1, 3]),
+      ))
         .toEqual(undefined);
-      expect(addTwoNumbers.addTwoNumbers(null, addTwoNumbers.convertArrayToList([1, 3])))
+      expect(addTwoNumbers.addTwoNumbersByConversion(
+        null, addTwoNumbers.convertArrayToList([1, 3]),
+      ))
         .toEqual(undefined);
-      expect(addTwoNumbers.addTwoNumbers(addTwoNumbers.convertArrayToList([1, 3]), undefined))
+      expect(addTwoNumbers.addTwoNumbersByConversion(
+        addTwoNumbers.convertArrayToList([1, 3]), undefined,
+      ))
         .toEqual(undefined);
-      expect(addTwoNumbers.addTwoNumbers(addTwoNumbers.convertArrayToList([1, 3]), null))
+      expect(addTwoNumbers.addTwoNumbersByConversion(
+        addTwoNumbers.convertArrayToList([1, 3]), null,
+      ))
         .toEqual(undefined);
+    });
+    describe('add numbers in lists functionality', () => {
+      it('should add regular numbers', () => {
+        const listOne = addTwoNumbers.convertArrayToList([2, 4, 3]);
+        const listTwo = addTwoNumbers.convertArrayToList([5, 6, 4]);
+        const sum = addTwoNumbers.addTwoNumbersByConversion(listOne, listTwo);
+        expect(sum).toEqual({ val: 7, next: { val: 0, next: { val: 8, next: undefined } } });
+      });
+      it('should add zero', () => {
+        const listOne = addTwoNumbers.convertArrayToList([0]);
+        const listTwo = addTwoNumbers.convertArrayToList([5, 6, 4]);
+        const sum = addTwoNumbers.addTwoNumbersByConversion(listOne, listTwo);
+        expect(sum).toEqual({ val: 5, next: { val: 6, next: { val: 4, next: undefined } } });
+      });
+      it('should multiple zeros', () => {
+        const listOne = addTwoNumbers.convertArrayToList([0, 0]);
+        const listTwo = addTwoNumbers.convertArrayToList([5, 6, 4]);
+        const sum = addTwoNumbers.addTwoNumbersByConversion(listOne, listTwo);
+        expect(sum).toEqual({ val: 5, next: { val: 6, next: { val: 4, next: undefined } } });
+      });
+      it('should handle larger numbers', () => {
+        const listOne = addTwoNumbers.convertArrayToList([9]);
+        const listTwo = addTwoNumbers.convertArrayToList([1, 9, 9, 9, 9, 9, 9, 9, 9, 9]);
+        const sum = addTwoNumbers.addTwoNumbersByConversion(listOne, listTwo);
+        expect(sum).toEqual(
+          {
+            val: 0,
+            next: {
+              val: 0,
+              next: {
+                val: 0,
+                next: {
+                  val: 0,
+                  next: {
+                    val: 0,
+                    next: {
+                      val: 0,
+                      next: {
+                        val: 0,
+                        next: {
+                          val: 0,
+                          next: {
+                            val: 0,
+                            next: {
+                              val: 0,
+                              next: {
+                                val: 1,
+                                next: undefined,
+                              },
+                            },
+                          },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+          },
+        );
+      });
+    });
+  });
+  describe('add two numbers checks', () => {
+    it('invalid input checks', () => {
+      expect(addTwoNumbers.addTwoNumbers(undefined,
+        { val: 1, next: undefined })).toEqual(undefined);
+      expect(addTwoNumbers.addTwoNumbers(null, { val: 1, next: undefined })).toEqual(undefined);
+      expect(addTwoNumbers.addTwoNumbers(
+        { val: 1, next: undefined }, undefined,
+      )).toEqual(undefined);
+      expect(addTwoNumbers.addTwoNumbers({ val: 1, next: undefined }, null)).toEqual(undefined);
+      expect(addTwoNumbers.addTwoNumbers(undefined, null)).toEqual(undefined);
     });
     describe('add numbers in lists functionality', () => {
       it('should add regular numbers', () => {
@@ -96,7 +177,13 @@ describe('add two numbers file checks', () => {
         const sum = addTwoNumbers.addTwoNumbers(listOne, listTwo);
         expect(sum).toEqual({ val: 5, next: { val: 6, next: { val: 4, next: undefined } } });
       });
-      it('should handle larger numbers', () => {
+      it('should handle carry', () => {
+        const listOne = addTwoNumbers.convertArrayToList([8, 9]);
+        const listTwo = addTwoNumbers.convertArrayToList([9, 7, 8]);
+        const sum = addTwoNumbers.addTwoNumbers(listOne, listTwo); // ?
+        expect(sum).toEqual({ val: 7, next: { val: 7, next: { val: 9, next: undefined } } });
+      });
+      it('should handle larger numbers, carry should add next digit', () => {
         const listOne = addTwoNumbers.convertArrayToList([9]);
         const listTwo = addTwoNumbers.convertArrayToList([1, 9, 9, 9, 9, 9, 9, 9, 9, 9]);
         const sum = addTwoNumbers.addTwoNumbers(listOne, listTwo);
